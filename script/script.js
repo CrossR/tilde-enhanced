@@ -8,10 +8,10 @@ const CONFIG = {
    */
   commands: [
     {
-      name: 'Duckduckgo',
+      name: 'Google',
       key: '*',
-      url: 'https://duckduckgo.com',
-      search: '/?q={}',
+      url: 'https://google.co.uk',
+      search: '/search?q={}',
       color: '#DE5833',
     },
     {
@@ -26,6 +26,16 @@ const CONFIG = {
     },
     {
       category: 'General',
+      name: 'Calendar',
+      key: 'c',
+      url: 'https://calendar.google.com',
+      search: '/calendar/r/search?q={}',
+      color: 'linear-gradient(135deg, #006CA4, #0077B5)',
+      icon: 'calendar',
+      quickLaunch: true,
+    },
+    {
+      category: 'General',
       name: 'Drive',
       key: 'd',
       url: 'https://drive.google.com',
@@ -33,16 +43,6 @@ const CONFIG = {
       color: 'linear-gradient(135deg, #FFD04B, #1EA362, #4688F3)',
       icon: 'drive',
       quickLaunch: false,
-    },
-    {
-      category: 'General',
-      name: 'LinkedIn',
-      key: 'l',
-      url: 'https://linkedin.com',
-      search: '/search/results/all/?keywords={}',
-      color: 'linear-gradient(135deg, #006CA4, #0077B5)',
-      icon: 'linkedin',
-      quickLaunch: true,
     },
     {
       category: 'Tech',
@@ -65,17 +65,25 @@ const CONFIG = {
       quickLaunch: true,
     },
     {
-      category: 'Tech',
-      name: 'Ars Technica',
-      key: 'a',
-      url: 'https://arstechnica.com',
-      search: '/search/?ie=UTF-8&q={}',
-      color: 'linear-gradient(135deg, #FF4E00, #B83800)',
-      icon: 'arstechnica',
+      category: 'Personal',
+      name: 'Wiki',
+      key: 'w',
+      url: 'https://wiki.ryancross.xyz',
+      color: 'linear-gradient(135deg, #3F51B5, #D8EAFF)',
+      icon: 'wiki',
       quickLaunch: false,
     },
     {
-      category: 'Fun',
+      category: 'Personal',
+      name: 'Mayan',
+      key: 'e',
+      url: 'https://mayan.ryancross.xyz',
+      color: 'linear-gradient(135deg, #2C3E50, #C5D7E9)',
+      icon: 'mayan',
+      quickLaunch: true,
+    },
+    {
+      category: 'Social',
       name: 'YouTube',
       key: 'y',
       url: 'https://youtube.com',
@@ -85,26 +93,7 @@ const CONFIG = {
       quickLaunch: false,
     },
     {
-      category: 'Fun',
-      name: 'Netflix',
-      key: 'n',
-      url: 'https://www.netflix.com',
-      color: 'linear-gradient(135deg, #E50914, #CB020C)',
-      icon: 'netflix',
-      quickLaunch: false,
-    },
-    {
-      category: 'Fun',
-      name: 'Twitch',
-      key: 't',
-      url: 'https://www.twitch.tv',
-      search: '/directory/game/{}',
-      color: 'linear-gradient(135deg, #6441a5, #4b367c)',
-      icon: 'twitch',
-      quickLaunch: false,
-    },
-    {
-      category: 'Other',
+      category: 'Social',
       name: 'Reddit',
       key: 'r',
       url: 'https://reddit.com',
@@ -114,23 +103,13 @@ const CONFIG = {
       quickLaunch: false,
     },
     {
-      category: 'Other',
+      category: 'Social',
       name: 'Twitter',
       key: 'o',
       url: 'https://twitter.com',
       color: 'linear-gradient(135deg, #C0A886, #E2DBC8)',
       icon: 'twitter',
       quickLaunch: true,
-    },
-    {
-      category: 'Other',
-      name: 'IMDb',
-      key: 'i',
-      url: 'https://imdb.com',
-      search: '/find?ref_=nv_sr_fn&q={}',
-      color: 'linear-gradient(135deg, #7A5F00, #E8B708)',
-      icon: 'imdb',
-      quickLaunch: false,
     },
   ],
 
@@ -159,7 +138,7 @@ const CONFIG = {
    */
   defaultSuggestions: {
     g: ['g/issues', 'g/pulls', 'gist.github.com'],
-    r: ['r/r/unixporn', 'r/r/startpages', 'r/r/webdev', 'r/r/technology'],
+    r: ['r/r/all', 'r/r/programming'],
   },
 
   /**

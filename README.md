@@ -71,7 +71,7 @@ URL. For example:
 - Entering `keep.google.com` would redirect you to
   [keep.google.com](https://keep.google.com/).
 
-### Query Paramater
+### Query Parameter
 
 Additionally, you can pass any query via the `q` query param. For example:
 
